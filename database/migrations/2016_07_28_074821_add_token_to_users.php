@@ -14,6 +14,7 @@ class AddTokenToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('api_token', 60)->unique();
+            $table->boolean('is_admin')->default(FALSE);
         });
     }
 
@@ -26,6 +27,7 @@ class AddTokenToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('api_token');
+            $table->dropColumn('is_admin');
         });
     }
 }

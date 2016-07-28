@@ -21,8 +21,7 @@ class AuthController extends Controller {
   |
   */
 
-  use AuthenticatesA
-ndRegistersUsers, ThrottlesLogins;
+  use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
   /**
    * Where to redirect users after login / registration.
@@ -66,5 +65,9 @@ ndRegistersUsers, ThrottlesLogins;
       'email' => $data['email'],
       'password' => bcrypt($data['password']),
     ]);
+  }
+  
+  function login() {
+    
   }
 }

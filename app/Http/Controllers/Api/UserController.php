@@ -18,7 +18,7 @@ class UserController extends ApiController
      */
     public function index()
     {
-        $lstUsers = User::all();
+        $lstUsers = User::all()->toArray();
         return json_encode($lstUsers);
     }
 

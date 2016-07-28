@@ -15,13 +15,13 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::get('user/list', 'User\UserController@listall');
+Route::get('user/list','User\UserController@listall')->middleware(['auth.admin']);
 Route::get('user/create', 'User\UserController@create');
 Route::post('user/store', 'User\UserController@store');
 
 /** API Route */
 Route::group(array('prefix' => 'api/v1'), function () {
-  Route::resource('user', 'Api\UserController');
+  Route::resource('user', 'Api\UserController@index');
 });
 
 /** API End**/
