@@ -12,4 +12,7 @@ Route::group([
 ], function () {
   Route::get('/login', 'IndexController@index');
   Route::get('/dashboard', 'IndexController@dashboard');
+  Route::get('/lock', function (){
+    return view('Admin::lockscreen');
+  });
 });

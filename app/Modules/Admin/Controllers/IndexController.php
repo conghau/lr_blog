@@ -16,4 +16,7 @@ class IndexController extends Controller {
   function dashboard() {
     return view('Admin::dashboard');
   }
+  function unlock(){
+    
+  }
 }
