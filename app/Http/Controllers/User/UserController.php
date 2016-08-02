@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request as Request;
 use Illuminate\Support\Facades\Session;
 use App\User;
+use Auth;
 
 class UserController extends Controller {
   public function create() {
@@ -17,7 +18,7 @@ class UserController extends Controller {
       'password' => 'required'
     ]);
     $input = $request->all();
-    User::create($input);
+    Auth::user()->create($input);
     Session::flash('flash_message', 'User successfully added!');
     return redirect()->back()->withInput();
   }

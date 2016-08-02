@@ -7,7 +7,6 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
-use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller {
   /*
@@ -65,9 +64,5 @@ class AuthController extends Controller {
       'email' => $data['email'],
       'password' => bcrypt($data['password']),
     ]);
-  }
-  
-  function login() {
-    
   }
 }

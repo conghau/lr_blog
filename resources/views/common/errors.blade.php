@@ -1,4 +1,4 @@
-@if($errors->any())
+@if(isset($errors))
     <div class="alert alert-danger">
         @foreach($errors->all() as $error)
             <p>{{ $error }}</p>

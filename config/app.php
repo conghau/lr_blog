@@ -158,6 +158,15 @@ return [
     App\Providers\EventServiceProvider::class,
     App\Providers\RouteServiceProvider::class,
 
+    /*
+     * Theme Service
+     */
+    igaster\laravelTheme\themeServiceProvider::class,
+
+    /*
+     * My Service
+     */
+    App\Modules\ModuleServiceProvider::class,
   ],
 
   /*
@@ -205,7 +214,7 @@ return [
     'View' => Illuminate\Support\Facades\View::class,
     'Form' => Collective\Html\FormFacade::class,
     'Html' => Collective\Html\HtmlFacade::class,
-
+    'Theme' => igaster\laravelTheme\Facades\Theme::class,
   ],
 
 ];
