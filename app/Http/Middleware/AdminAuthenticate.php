@@ -16,7 +16,7 @@ class AdminAuthenticate {
       return $next($request);
     }
     else {
-      return redirect('auth/login/');
+      return redirect('admin/login/');
     }
   }
 }

@@ -27,7 +27,7 @@ Route::get('setTheme/{themeName}', function($themeName){
 Route::get('user/register', 'Auth\AuthController@getRegister');
 Route::post('user/postRegister', 'Auth\AuthController@postRegister');
 
-Route::get('user/list', 'User\UserController@listall')->middleware(['auth']);
+Route::get('user/list', 'User\UserController@listall');
 Route::get('user/create', 'User\UserController@create');
 Route::post('user/store', 'User\UserController@store');
 

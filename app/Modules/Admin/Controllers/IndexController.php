@@ -7,12 +7,10 @@
  */
 namespace App\Modules\Admin\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\AdminController;
 
-class IndexController extends Controller {
-  function index() {
-    return view('Admin::login');
-  }
+class IndexController extends AdminController {
+  
   function dashboard() {
     return view('Admin::dashboard');
   }

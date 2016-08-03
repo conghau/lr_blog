@@ -10,7 +10,7 @@ Route::group([
   'middleware' => ['web'],
   'namespace' => 'App\Modules\Admin\Controllers'
 ], function () {
-  Route::get('/login', 'IndexController@index');
+  Route::get('/login', 'AuthController@showFormLogin');
   Route::get('/dashboard', 'IndexController@dashboard');
   Route::get('/lock', function (){
     return view('Admin::lockscreen');

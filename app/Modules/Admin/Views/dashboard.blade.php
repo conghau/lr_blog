@@ -1,3 +1,3 @@
-@extends('layouts.admin_master', ['body_class' => 'skin-blue sidebar-mini'])
+@extends('layouts.admin_master', ['body_class' => 'hold-transition skin-blue sidebar-mini'])
 @section('content')
 @endsection

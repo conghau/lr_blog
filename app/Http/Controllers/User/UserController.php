@@ -4,7 +4,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request as Request;
 use Illuminate\Support\Facades\Session;
-use App\User;
+use App\Models\User;
 use Auth;
 
 class UserController extends Controller {
@@ -24,7 +24,8 @@ class UserController extends Controller {
   }
 
   public function listall() {
-    $lstUser = User::all();
-    return view('user.list', array('lstUser' => $lstUser));
+    $users = User::all();
+    //$users = Redis::get('users');
+    return view('user.list', array('lstUser' => $users));
   }
 }
