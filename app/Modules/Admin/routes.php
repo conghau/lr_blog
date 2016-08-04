@@ -15,4 +15,6 @@ Route::group([
   Route::get('/lock', function (){
     return view('Admin::lockscreen');
   });
+
+  Route::get('/story', 'StoryController@index');
 });

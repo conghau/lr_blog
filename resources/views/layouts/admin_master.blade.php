@@ -26,14 +26,14 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="{{url('/')}}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="../assets/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="{{url('/')}}/assets/css/skins/_all-skins.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../assets/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{url('/')}}/assets/css/AdminLTE.min.css">
     <!-- iCheck -->
-    <link rel="stylesheet" href="../plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="{{url('/')}}/plugins/iCheck/square/blue.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,16 +53,19 @@
         @include('includes.admin.header')
         @include('includes.admin.sidebar')
 
-        <div class="content-wrapper"></div>
+        <div class="content-wrapper">
+            @yield('content')
+        </div>
         @include('includes.admin.footer')
         <aside class="control-sidebar control-sidebar-dark"></aside>
         <div class="control-sidebar-bg"></div>
     </div>
+
+    @include('includes.admin.js')
     <!-- ./wrapper -->
     <script>
         $.widget.bridge('uibutton', $.ui.button);
     </script>
-    @include('includes.admin.js')
 @endif
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"

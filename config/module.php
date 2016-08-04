@@ -10,5 +10,6 @@ return [
     'Admin',
     'Site',
     'Api',
+    'Story'
   ]
 ];
